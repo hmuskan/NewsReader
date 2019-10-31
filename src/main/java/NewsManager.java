@@ -22,7 +22,6 @@ public class NewsManager {
         URL obj = new URL(url);
         HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
         connection.setRequestMethod("GET");
-        int responseCode = connection.getResponseCode();
         BufferedReader in = new BufferedReader(
                 new InputStreamReader(connection.getInputStream()));
         String inputLine;
@@ -37,8 +36,8 @@ public class NewsManager {
         Iterator<JSONObject> itr = articles.iterator();
         while(itr.hasNext()) {
             JSONObject ob = itr.next();
-            System.out.println(ob.get("author"));
             System.out.println(ob.get("title"));
+            System.out.println(ob.get("description"));
         }
     }
 }
