@@ -9,7 +9,10 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
@@ -17,25 +20,27 @@ public class NewsManager {
     static int newsCount = -1;
     static JFrame frame;
     static JTextArea textDisplay;
-    static JButton nextButton, prevButton; //TODO: Create prev button, add functionality of going back, update i variable continuously
-
+    static JButton nextButton, prevButton;
+    //TODO: Add different textArea for title, description and time and add image on top
     public static void main(String[] args) {
         initialiseGraphics();
-        List<String> newsList = new ArrayList();
+        List<News> newsList = new ArrayList();
         try {
             newsList = sendRequest();
         } catch (Exception e) {
             e.printStackTrace();
         }
         textDisplay.setText("News Loaded. Press Next to view.");
-        final List<String> finalNewsList = newsList;
+        final List<News> finalNewsList = newsList;
         nextButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if(newsCount < finalNewsList.size()) {
                     ++newsCount;
                     if(newsCount != 0)
                     prevButton.setVisible(true);
-                    textDisplay.setText(finalNewsList.get(newsCount));
+                    textDisplay.setText(finalNewsList.get(newsCount).getTitle() + "\n" +
+                            finalNewsList.get(newsCount).getPublishedAt() + "\n\n" +
+                            finalNewsList.get(newsCount).getDescription());
 
                 } else {
                     nextButton.setVisible(false);
@@ -45,13 +50,15 @@ public class NewsManager {
         });
         prevButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if(newsCount==0){
+                if(newsCount == 0){
                     prevButton.setVisible(false);
                 }
                 else{
                     nextButton.setVisible(true);
                     --newsCount;
-                    textDisplay.setText(finalNewsList.get(newsCount));
+                    textDisplay.setText(finalNewsList.get(newsCount).getTitle() + "\n" +
+                            finalNewsList.get(newsCount).getPublishedAt() + "\n\n" +
+                            finalNewsList.get(newsCount).getDescription());
                 }
             }
         });
@@ -78,10 +85,10 @@ public class NewsManager {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public static List<String> sendRequest() throws Exception{
+    public static List<News> sendRequest() throws Exception{
         String url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=a60e67d510164aa7822fa646d8aaaca5&pageSize=5";
         URL obj = new URL(url);
-        List<String> news = new ArrayList();
+        List<News> newsList = new ArrayList();
         HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
         connection.setRequestMethod("GET");
         BufferedReader in = new BufferedReader(
@@ -97,10 +104,17 @@ public class NewsManager {
         JSONArray articles = (JSONArray) json.get("articles");
         Iterator<JSONObject> itr = articles.iterator();
         while(itr.hasNext()) {
+            News news = new News();
             JSONObject ob = itr.next();
-            String text = ob.get("title") + "\n\n" + ob.get("description");
-            news.add(text);
+            news.setTitle((String) ob.get("title"));
+            news.setDescription((String) ob.get("description"));
+            news.setImgURL((String) ob.get("urlToImage"));
+            String date = (String) ob.get("publishedAt");
+            DateFormat df1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX");
+            Date formattedDate = df1.parse(date);
+            news.setPublishedAt(formattedDate.toString());
+            newsList.add(news);
         }
-        return news;
+        return newsList;
     }
 }
