@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 
+=======
+.idea/workspace.xml 
+>>>>>>> 218f11b93a66a967ae1775307ebe2c66ac24b2f5
