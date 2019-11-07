@@ -14,10 +14,11 @@ import java.util.Iterator;
 import java.util.List;
 
 public class NewsManager {
-    static int i = 0;
-    static JFrame f;
-    static JTextArea t;
-    static JButton b; //TODO: Create prev button, add functionality of going back, update i variable continuously
+    static int newsCount = 0;
+    static JFrame frame;
+    static JTextArea textDisplay;
+    static JButton nextButton, prevButton; //TODO: Create prev button, add functionality of going back, update i variable continuously
+
     public static void main(String[] args) {
         initialiseGraphics();
         List<String> newsList = new ArrayList();
@@ -26,16 +27,21 @@ public class NewsManager {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        t.setText("News Loaded. Press Next to view.");
+        textDisplay.setText("News Loaded. Press Next to view.");
         final List<String> finalNewsList = newsList;
-        b.addActionListener(new ActionListener() {
+        nextButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if(i < finalNewsList.size()) {
-                    t.setText(finalNewsList.get(i));
-                    i++;
+                if(newsCount < finalNewsList.size()) {
+                    textDisplay.setText(finalNewsList.get(newsCount));
+                    newsCount++;
                 } else {
-                    b.setVisible(false);
+                    nextButton.setVisible(false);
                 }
+
+            }
+        });
+        prevButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
 
             }
         });
@@ -43,19 +49,22 @@ public class NewsManager {
 
     private static void initialiseGraphics() {
         //TODO: Beautify graphics
-        f = new JFrame("NewsReader");
-        t = new JTextArea("Please wait while the news is loading...");
-        t.setLineWrap(true);
-        t.setWrapStyleWord(true);
-        t.setBounds(10,10, 380,150);
-        f.add(t);
-        b = new JButton("Next");
-        b.setBounds(300,400,70, 40);
-        f.add(b);
-        f.setSize(400,500);
-        f.setLayout(null);
-        f.setVisible(true);
-        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame = new JFrame("NewsReader");
+        textDisplay = new JTextArea("Please wait while the news is loading...");
+        prevButton = new JButton("Prev");
+        prevButton.setBounds(225, 400, 70, 40);
+        frame.add(prevButton);
+        textDisplay.setLineWrap(true);
+        textDisplay.setWrapStyleWord(true);
+        textDisplay.setBounds(10,10, 380,150);
+        frame.add(textDisplay);
+        nextButton = new JButton("Next");
+        nextButton.setBounds(300,400,70, 40);
+        frame.add(nextButton);
+        frame.setSize(400,500);
+        frame.setLayout(null);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     public static List<String> sendRequest() throws Exception{
