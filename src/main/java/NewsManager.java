@@ -98,9 +98,7 @@ public class NewsManager {
         Iterator<JSONObject> itr = articles.iterator();
         while(itr.hasNext()) {
             JSONObject ob = itr.next();
-            String text = (String)ob.get("title") + "\n\n" + (String)ob.get("description");
-            /*System.out.println(ob.get("title"));
-            System.out.println(ob.get("description"));*/
+            String text = ob.get("title") + "\n\n" + ob.get("description");
             news.add(text);
         }
         return news;
