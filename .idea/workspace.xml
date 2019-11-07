@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="43ef7f8c-ad9b-47c2-a867-3c10da476a20" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/NewsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NewsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NewsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NewsManager.class" afterDir="false" />
-    </list>
+    <list default="true" id="43ef7f8c-ad9b-47c2-a867-3c10da476a20" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/NewsManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+            <state relative-caret-position="544">
+              <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -153,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572882438531</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Renaming Variables">
+      <created>1573107112311</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573107112311</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView">
@@ -167,7 +170,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26153848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -200,7 +202,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Minor changes" />
     <MESSAGE value="Added Display of News&#10;Tasks to be done are indicated in TODOs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Display of News&#10;Tasks to be done are indicated in TODOs" />
+    <MESSAGE value="Renaming Variables" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renaming Variables" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jrt://C:/Program Files/Java/jdk-10.0.1!/oracle.net/module-info.class">
@@ -218,8 +221,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/NewsManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+        <state relative-caret-position="544">
+          <caret line="33" column="54" selection-start-line="33" selection-start-column="54" selection-end-line="33" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
