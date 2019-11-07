@@ -14,7 +14,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class NewsManager {
-    static int newsCount = 0;
+    static int newsCount = -1;
     static JFrame frame;
     static JTextArea textDisplay;
     static JButton nextButton, prevButton; //TODO: Create prev button, add functionality of going back, update i variable continuously
@@ -32,8 +32,11 @@ public class NewsManager {
         nextButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if(newsCount < finalNewsList.size()) {
+                    ++newsCount;
+                    if(newsCount != 0)
+                    prevButton.setVisible(true);
                     textDisplay.setText(finalNewsList.get(newsCount));
-                    newsCount++;
+
                 } else {
                     nextButton.setVisible(false);
                 }
@@ -42,7 +45,14 @@ public class NewsManager {
         });
         prevButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
+                if(newsCount==0){
+                    prevButton.setVisible(false);
+                }
+                else{
+                    nextButton.setVisible(true);
+                    --newsCount;
+                    textDisplay.setText(finalNewsList.get(newsCount));
+                }
             }
         });
     }
@@ -52,6 +62,7 @@ public class NewsManager {
         frame = new JFrame("NewsReader");
         textDisplay = new JTextArea("Please wait while the news is loading...");
         prevButton = new JButton("Prev");
+        prevButton.setVisible(false);
         prevButton.setBounds(225, 400, 70, 40);
         frame.add(prevButton);
         textDisplay.setLineWrap(true);
