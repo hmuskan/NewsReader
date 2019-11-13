@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43ef7f8c-ad9b-47c2-a867-3c10da476a20" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/News.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/PreferenceForm.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/NewsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NewsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/NewsManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NewsManager.class" afterDir="false" />
     </list>
@@ -20,18 +22,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/NewsManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="107" column="12" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
+            <state relative-caret-position="-561">
+              <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1066#1511#0" expanded="true" />
-                <element signature="e#1510#1511#0" expanded="true" />
-                <element signature="e#1551#1949#0" expanded="true" />
-                <element signature="e#1948#1949#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="9" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="18" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PreferenceForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -45,18 +76,8 @@
                 <element signature="e#175#176#0" expanded="true" />
                 <element signature="e#229#230#0" expanded="true" />
                 <element signature="e#275#276#0" expanded="true" />
-                <element signature="e#138#139#0" expanded="true" />
-                <element signature="e#166#167#0" expanded="true" />
-                <element signature="e#208#209#0" expanded="true" />
-                <element signature="e#242#243#0" expanded="true" />
-                <element signature="e#280#281#0" expanded="true" />
-                <element signature="e#314#315#0" expanded="true" />
-                <element signature="e#368#369#0" expanded="true" />
-                <element signature="e#414#415#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
                 <element signature="e#476#477#0" expanded="true" />
-                <element signature="e#520#521#0" expanded="true" />
-                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,9 +98,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/News.java" />
         <option value="$PROJECT_DIR$/src/main/java/NewsManager.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PreferenceForm.java" />
       </list>
     </option>
   </component>
@@ -95,22 +118,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+      <pane id="PackagesPane">
+        <subPane>
           <expand>
             <path>
-              <item name="NewsReader" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Muskan Hussain\IdeaProjects\NewsReader" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="NewsReader" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Muskan Hussain\IdeaProjects\NewsReader" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="NewsReader" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="C:\Users\Muskan Hussain\IdeaProjects\NewsReader" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="NewsReader" type="58d84e3e:PackageViewProjectNode" />
+              <item name="NewsReader" type="616d4139:PackageViewModuleNode" />
             </path>
           </expand>
           <select />
@@ -145,12 +158,22 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="NewsReader" type="58d84e3e:PackageViewProjectNode" />
-              <item name="NewsReader" type="616d4139:PackageViewModuleNode" />
+              <item name="NewsReader" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Muskan Hussain\IdeaProjects\NewsReader" type="442cc68d:ScopeViewTreeModel$RootNode" />
+            </path>
+            <path>
+              <item name="NewsReader" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Muskan Hussain\IdeaProjects\NewsReader" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name=".idea" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="NewsReader" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="C:\Users\Muskan Hussain\IdeaProjects\NewsReader" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -160,8 +183,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.18.jar!/" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
@@ -177,7 +200,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="NewsReader" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NewsManager" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="NewsManager" />
       <module name="NewsReader" />
@@ -187,6 +217,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.NewsManager" />
       </list>
     </recent_temporary>
@@ -223,7 +254,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573107112311</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added News Model&#10;Now fetching date and image">
+      <created>1573113077786</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1573113077786</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -239,7 +277,7 @@
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26153848" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26639676" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -271,20 +309,14 @@
     <MESSAGE value="Minor changes" />
     <MESSAGE value="Added Display of News&#10;Tasks to be done are indicated in TODOs" />
     <MESSAGE value="Renaming Variables" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renaming Variables" />
+    <MESSAGE value="Added News Model&#10;Now fetching date and image" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added News Model&#10;Now fetching date and image" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jrt://C:/Program Files/Java/jdk-10.0.1!/oracle.net/module-info.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/NewsReader.iml" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -300,32 +332,45 @@
             <element signature="e#175#176#0" expanded="true" />
             <element signature="e#229#230#0" expanded="true" />
             <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#138#139#0" expanded="true" />
-            <element signature="e#166#167#0" expanded="true" />
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#280#281#0" expanded="true" />
-            <element signature="e#314#315#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#414#415#0" expanded="true" />
-            <element signature="e#447#448#0" expanded="true" />
             <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/NewsManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="107" column="12" selection-start-line="107" selection-start-column="12" selection-end-line="107" selection-end-column="12" />
+        <state relative-caret-position="-561">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1066#1511#0" expanded="true" />
-            <element signature="e#1510#1511#0" expanded="true" />
-            <element signature="e#1551#1949#0" expanded="true" />
-            <element signature="e#1948#1949#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="9" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="18" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PreferenceForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="25" column="8" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -393,6 +438,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: com.googlecode.json-simple:json-simple:1.1.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

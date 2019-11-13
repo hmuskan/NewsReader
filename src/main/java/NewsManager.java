@@ -22,7 +22,7 @@ public class NewsManager {
     static JTextArea textDisplay;
     static JButton nextButton, prevButton;
     //TODO: Add different textArea for title, description and time and add image on top
-    public static void main(String[] args) {
+    public static void populateHeadlines() {
         initialiseGraphics();
         List<News> newsList = new ArrayList();
         try {
