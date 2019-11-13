@@ -31,7 +31,7 @@ public class NewsManager {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        textDisplay.setText("News Loaded. Press Next to view.");
+        textDisplay.setText("\n\n\n\n\n\n               News Loaded. Press Next to view.");
         final List<News> finalNewsList = newsList;
         nextButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -70,7 +70,7 @@ public class NewsManager {
     private static void initialiseGraphics() {
         //TODO: Beautify graphics
         frame = new JFrame("NewsReader");
-        textDisplay = new JTextArea("Please wait while the news is loading...");
+        textDisplay = new JTextArea("\n\n\n\n\n\n           Please wait while the news is loading...");
         prevButton = new JButton("Prev");
         prevButton.setVisible(false);
         prevButton.setBounds(225, 400, 60, 40);
@@ -81,7 +81,7 @@ public class NewsManager {
         textDisplay.setBorder(BorderFactory.createLineBorder(Color.black));
         textDisplay.setBackground(Color.cyan);
         textDisplay.setForeground(Color.black);
-        textDisplay.setFont(new Font("Arial Rounded MT Bold", Font.ITALIC, 15));
+        textDisplay.setFont(new Font("Imprint MT Shadow", Font.ITALIC, 15));
         frame.add(textDisplay);
         nextButton = new JButton("Next");
         nextButton.setBounds(300,400,60, 40);
