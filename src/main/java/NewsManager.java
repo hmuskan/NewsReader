@@ -3,6 +3,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -19,7 +20,7 @@ import java.util.List;
 public class NewsManager {
     static int newsCount = -1;
     static JFrame frame;
-    static JTextArea textDisplay;
+    static JTextArea textDisplay, textTitle, textDesc, textTime;
     static JButton nextButton, prevButton;
     //TODO: Add different textArea for title, description and time and add image on top
     public static void populateHeadlines() {
@@ -37,9 +38,10 @@ public class NewsManager {
                 if(newsCount < finalNewsList.size()) {
                     ++newsCount;
                     if(newsCount != 0)
-                    prevButton.setVisible(true);
-                    textDisplay.setText(finalNewsList.get(newsCount).getTitle() + "\n" +
-                            finalNewsList.get(newsCount).getPublishedAt() + "\n\n" +
+                        prevButton.setVisible(true);
+
+                    textDisplay.setText("Title: " + finalNewsList.get(newsCount).getTitle() + "\n\n" +
+                            "Published at: " + finalNewsList.get(newsCount).getPublishedAt() + "\n\n" +
                             finalNewsList.get(newsCount).getDescription());
 
                 } else {
@@ -56,8 +58,9 @@ public class NewsManager {
                 else{
                     nextButton.setVisible(true);
                     --newsCount;
-                    textDisplay.setText(finalNewsList.get(newsCount).getTitle() + "\n" +
-                            finalNewsList.get(newsCount).getPublishedAt() + "\n\n" +
+
+                    textDisplay.setText("Title: " + finalNewsList.get(newsCount).getTitle() + "\n\n" +
+                            "Published at: " + finalNewsList.get(newsCount).getPublishedAt() + "\n\n" +
                             finalNewsList.get(newsCount).getDescription());
                 }
             }
@@ -70,14 +73,30 @@ public class NewsManager {
         textDisplay = new JTextArea("Please wait while the news is loading...");
         prevButton = new JButton("Prev");
         prevButton.setVisible(false);
-        prevButton.setBounds(225, 400, 70, 40);
+        prevButton.setBounds(225, 400, 60, 40);
         frame.add(prevButton);
         textDisplay.setLineWrap(true);
         textDisplay.setWrapStyleWord(true);
-        textDisplay.setBounds(10,10, 380,150);
+        textDisplay.setBounds(10,10, 360,250);
+        textDisplay.setBorder(BorderFactory.createLineBorder(Color.black));
+        textDisplay.setBackground(Color.cyan);
+        textDisplay.setForeground(Color.black);
+        textDisplay.setFont(new Font("Arial Rounded MT Bold", Font.ITALIC, 15));
         frame.add(textDisplay);
+        /*textTitle.setLineWrap(true);
+        textTitle.setWrapStyleWord(true);
+        textTitle.setBounds(10,10, 360,250);
+        frame.add(textTitle);
+        textTime.setLineWrap(true);
+        textTime.setWrapStyleWord(true);
+        textTime.setBounds(10,10, 360,250);
+        frame.add(textTime);
+        textDesc.setLineWrap(true);
+        textDesc.setWrapStyleWord(true);
+        textDesc.setBounds(10,10, 360,250);
+        frame.add(textDesc);*/
         nextButton = new JButton("Next");
-        nextButton.setBounds(300,400,70, 40);
+        nextButton.setBounds(300,400,60, 40);
         frame.add(nextButton);
         frame.setSize(400,500);
         frame.setLayout(null);
