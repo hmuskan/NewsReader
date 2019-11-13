@@ -20,14 +20,14 @@ import java.util.List;
 public class NewsManager {
     static int newsCount = -1;
     static JFrame frame;
-    static JTextArea textDisplay, textTitle, textDesc, textTime;
+    static JTextArea textDisplay;
     static JButton nextButton, prevButton;
     //TODO: Add different textArea for title, description and time and add image on top
-    public static void populateHeadlines() {
+    public static void populateHeadlines(String category) {
         initialiseGraphics();
         List<News> newsList = new ArrayList();
         try {
-            newsList = sendRequest();
+            newsList = sendRequest(category);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -83,18 +83,6 @@ public class NewsManager {
         textDisplay.setForeground(Color.black);
         textDisplay.setFont(new Font("Arial Rounded MT Bold", Font.ITALIC, 15));
         frame.add(textDisplay);
-        /*textTitle.setLineWrap(true);
-        textTitle.setWrapStyleWord(true);
-        textTitle.setBounds(10,10, 360,250);
-        frame.add(textTitle);
-        textTime.setLineWrap(true);
-        textTime.setWrapStyleWord(true);
-        textTime.setBounds(10,10, 360,250);
-        frame.add(textTime);
-        textDesc.setLineWrap(true);
-        textDesc.setWrapStyleWord(true);
-        textDesc.setBounds(10,10, 360,250);
-        frame.add(textDesc);*/
         nextButton = new JButton("Next");
         nextButton.setBounds(300,400,60, 40);
         frame.add(nextButton);
@@ -104,8 +92,8 @@ public class NewsManager {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    public static List<News> sendRequest() throws Exception{
-        String url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=a60e67d510164aa7822fa646d8aaaca5&pageSize=5";
+    public static List<News> sendRequest(String category) throws Exception{
+        String url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=a60e67d510164aa7822fa646d8aaaca5&pageSize=5&category=" + category;
         URL obj = new URL(url);
         List<News> newsList = new ArrayList();
         HttpURLConnection connection = (HttpURLConnection) obj.openConnection();
