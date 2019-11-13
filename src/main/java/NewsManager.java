@@ -35,7 +35,7 @@ public class NewsManager {
         final List<News> finalNewsList = newsList;
         nextButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                if(newsCount < finalNewsList.size()) {
+                if(newsCount < finalNewsList.size() - 1) {
                     ++newsCount;
                     if(newsCount != 0)
                         prevButton.setVisible(true);

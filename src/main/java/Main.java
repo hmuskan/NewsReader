@@ -18,7 +18,7 @@ public class Main {
         final List<String> categories = new ArrayList();
         try {
             Connection mycon = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb",
-                    "root", "1017");
+                    "root", "muskan3799");
             ResultSet rs = mycon.createStatement().executeQuery("select * from preference;");
             while(rs.next())
                 categories.add(rs.getString(1));
